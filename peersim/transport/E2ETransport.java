@@ -29,7 +29,7 @@ import peersim.edsim.*;
  * and that class is used to obtain the latency for messages sending.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class E2ETransport implements Transport, RouterInfo
 {
@@ -93,10 +93,11 @@ public Object clone() throws CloneNotSupportedException
 public void send(Node src, Node dest, Object msg, int pid)
 {
 	/* Assuming that the sender corresponds to the source node */
-  E2ETransport sender = this;
-  E2ETransport receiver = (E2ETransport) dest.getProtocol(tid);
-  int latency = E2ENetwork.getLatency(sender.router, receiver.router) + local*2;
-  EventHandler.add(latency, msg, dest, pid);
+	E2ETransport sender = this;
+	E2ETransport receiver = (E2ETransport) dest.getProtocol(tid);
+	int latency =
+	   E2ENetwork.getLatency(sender.router, receiver.router) + local*2;
+	EventHandler.add(latency, msg, dest, pid);
 }
 
 //---------------------------------------------------------------------

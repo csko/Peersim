@@ -28,7 +28,7 @@ import peersim.util.*;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class UniformRouterAssignment implements Dynamics
 {
@@ -79,13 +79,13 @@ public UniformRouterAssignment(String prefix)
 // Comment inherited from interface
 public void modify()
 {
-  int nsize = Network.size();
-  for (int i=0; i < nsize; i++) {
-  	Node node = Network.get(i);
-  	RouterInfo t = (RouterInfo) node.getProtocol(pid);
-  	int r = CommonRandom.r.nextInt(nrouters);
-  	t.setRouter(r);
-  }
+	int nsize = Network.size();
+	for (int i=0; i < nsize; i++) {
+		Node node = Network.get(i);
+		RouterInfo t = (RouterInfo) node.getProtocol(pid);
+		int r = CommonRandom.r.nextInt(nrouters);
+		t.setRouter(r);
+	}
 }
 
 }
