@@ -26,21 +26,10 @@ import peersim.cdsim.CDProtocol;
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.3 $
+ *  @version $Revision: 1.4 $
  */
 public abstract class AbstractFunction implements CDProtocol, Aggregation
 {
-
-
-////////////////////////////////////////////////////////////////////////////
-// Constants
-////////////////////////////////////////////////////////////////////////////
-
-/**
-* the suffix for the protocol connection parameter. The parameter read
-* from configuration will be prefix+"."+PAR_CONN
-*/
-public static final String PAR_CONN = "linkable";
 
 
 ////////////////////////////////////////////////////////////////////////////
