@@ -25,7 +25,7 @@ import peersim.core.*;
  * available through the SingleValue interface.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class SingleValueHolder 
 implements SingleValue, Protocol
@@ -61,7 +61,7 @@ public Object clone() throws CloneNotSupportedException
 }
 
 //--------------------------------------------------------------------------
-//Constants
+//methods
 //--------------------------------------------------------------------------
 
 // Comment inherited from interface
@@ -79,5 +79,10 @@ public void setValue(double value)
 }
 
 //--------------------------------------------------------------------------
+
+/**
+ * Returns the value as a string.
+ */
+public String toString() { return ""+value; }
 
 }
