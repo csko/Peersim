@@ -26,7 +26,7 @@ import peersim.util.*;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class WireScaleFreeBA
 implements Dynamics
@@ -113,9 +113,10 @@ public void modify()
 				stop = addNeighbor(ni, pid, nk) &&
 					addNeighbor(nk, pid, ni);
 			} while (!stop);
-			dest[len++] = ni;
-			dest[len++] = nk;
+			dest[len+2*j] = ni;
+			dest[len+2*j+1] = nk;
 		}
+		len+=edges*2;
 	}
 }
 
