@@ -20,12 +20,13 @@ package example.aggregation;
 
 import peersim.util.CommonRandom;
 import peersim.core.*;
+import peersim.config.FastConfig;
 
 /**
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.1 $
+ *  @version $Revision: 1.2 $
  */
 public class AverageFunction extends AbstractFunction {
 
@@ -44,7 +45,7 @@ public Object clone() throws CloneNotSupportedException {
  */
 public void nextCycle( Node node, int protocolID )
 {
-	int linkableID = Protocols.getLink(protocolID);
+	int linkableID = FastConfig.getLinkable(protocolID);
 	Linkable linkable = (Linkable) node.getProtocol( linkableID );
 	if (linkable.degree() > 0)
 	{

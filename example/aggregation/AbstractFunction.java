@@ -26,7 +26,7 @@ import peersim.cdsim.CDProtocol;
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.2 $
+ *  @version $Revision: 1.3 $
  */
 public abstract class AbstractFunction implements CDProtocol, Aggregation
 {
@@ -58,12 +58,7 @@ protected double value;
 
 protected AbstractFunction() {}
 
-public AbstractFunction(String prefix, Object obj) {
-
-	int protocolId = ((Integer) obj).intValue();
-	int link = Configuration.getPid(prefix+"."+PAR_CONN);
-	Protocols.setLink(protocolId, link);
-}
+public AbstractFunction(String prefix, Object obj) {}
 
 public Object clone() throws CloneNotSupportedException {
 
