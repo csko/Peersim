@@ -26,7 +26,7 @@ import peersim.dynamics.Dynamics;
  * Initialize an aggregation protocol using a peak distribution.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class PeakDistributionInitializer implements Dynamics
 {
@@ -90,15 +90,13 @@ public class PeakDistributionInitializer implements Dynamics
 	// Comment inherited from interface
 	public void modify()
 	{
-	
             System.err.println("Restarting: " + Network.size());
             for (int i = 0; i < Network.size(); i++) {
-                Aggregation prot = (Aggregation) Network.get(i).getProtocol(pid);
+                SingleValue prot = (SingleValue) Network.get(i).getProtocol(pid);
                 prot.setValue(0);
             }
-            Aggregation prot = (Aggregation) Network.get(0).getProtocol(pid);
+            SingleValue prot = (SingleValue) Network.get(0).getProtocol(pid);
             prot.setValue(value);
-            
-	}
+        }
 
 }

@@ -21,23 +21,27 @@ package example.aggregation;
 import peersim.util.CommonRandom;
 import peersim.core.*;
 import peersim.config.FastConfig;
+import distributions.SingleValueHolder;
+import peersim.cdsim.CDProtocol;
 
 /**
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.2 $
+ *  @version $Revision: 1.3 $
  */
-public class AverageFunction extends AbstractFunction {
+public class AverageFunction extends SingleValueHolder implements CDProtocol {
 
-public AverageFunction(String prefix, Object obj) { super(prefix, obj); }
+public AverageFunction(String prefix) { super(prefix); }
 
-public Object clone() throws CloneNotSupportedException {
+public AverageFunction(String prefix, Object obj) { this(prefix); }
+
+/*public Object clone() throws CloneNotSupportedException {
 	
 	AverageFunction af = (AverageFunction)super.clone();
 	af.value = value;
 	return af;
-}
+}*/
 
 /**
  * Using a {@link Linkable} protocol choses a neighbor and performs a
