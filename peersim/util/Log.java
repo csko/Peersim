@@ -18,16 +18,25 @@
 
 package peersim.util;
 
+import java.io.*;
+
 /**
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Log
 {
 
   private static String prefix = "";
+
+  private static PrintStream stream = System.out;
+  
+  public static void setStream(PrintStream newStream)
+  {
+  	stream = newStream;
+  }
 
   public static void setPrefix(String newPrefix)
   {
@@ -36,7 +45,7 @@ public class Log
 
   public static void println(String observerId, String string)
   {
-  	System.out.println(observerId + " " + prefix + string);
+  	stream.println(observerId + " " + prefix + string);
   }
 
 }
