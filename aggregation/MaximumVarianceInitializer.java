@@ -30,7 +30,7 @@ import peersim.dynamics.*;
  * with crashed nodes.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.1.1.1 $
  */
 public class MaximumVarianceInitializer implements Initializer, Dynamics
 {

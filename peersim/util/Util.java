@@ -22,7 +22,7 @@ package peersim.util;
  * Utility methods.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.1.1.1 $
  */
 public class Util 
 {

@@ -28,7 +28,7 @@ package aggregation;
  *  reduce memory footprint.
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.1 $
+ *  @version $Revision: 1.1.1.1 $
  */
 public interface Aggregation 
 {

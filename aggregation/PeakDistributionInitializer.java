@@ -27,7 +27,7 @@ import peersim.init.*;
  * Initialize an aggregation protocol using a peak distribution.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.1.1.1 $
  */
 public class PeakDistributionInitializer implements Initializer, Dynamics
 {
