@@ -30,7 +30,7 @@ import peersim.config.*;
  * and actual size.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class AverageObserver implements Observer
 {
@@ -89,7 +89,7 @@ public class AverageObserver implements Observer
 	// Comment inherited from interface
 	public boolean analyze()
 	{
-		int time = peersim.core.CommonState.getT();
+		long time = peersim.core.CommonState.getTime();
 		
 		/* Initialization */
 		final int len = Network.size();

@@ -29,7 +29,7 @@ import peersim.edsim.*;
  * and that class is used to obtain the latency for messages sending.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class E2ETransport implements Transport, RouterInfo
 {
@@ -97,7 +97,7 @@ public void send(Node src, Node dest, Object msg, int pid)
 	E2ETransport receiver = (E2ETransport) dest.getProtocol(tid);
 	int latency =
 	   E2ENetwork.getLatency(sender.router, receiver.router) + local*2;
-	EventHandler.add(latency, msg, dest, pid);
+	EDSimulator.add(latency, msg, dest, pid);
 }
 
 //---------------------------------------------------------------------
