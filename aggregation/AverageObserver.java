@@ -31,7 +31,7 @@ import peersim.util.*;
  * and actual size.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class AverageObserver implements Observer
 {
@@ -116,14 +116,13 @@ public class AverageObserver implements Observer
 			Node node = Network.get(i);
 			Aggregation protocol = (Aggregation) node.getProtocol(pid);
 
-			boolean toBeCounted = true;
-			if (protocol instanceof GeneralAggregation) {
-				GeneralAggregation ag = (GeneralAggregation) protocol;
-				toBeCounted = ag.toBeCounted();
-			}
-
-			if (toBeCounted) 
+			try {
 				stats.add(protocol.getValue());
+			} catch (Exception e) {
+				/* 
+				 * We do nothing; the node should not be counted in the
+				 */ 
+			}
 		}
 		double var = stats.getVar();
 		if (initvar < 0 || Double.isNaN(initvar))

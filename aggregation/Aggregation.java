@@ -28,13 +28,15 @@ package aggregation;
  *  reduce memory footprint.
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.2 $
+ *  @version $Revision: 1.3 $
  */
 public interface Aggregation
 {
 
 	/**
-	 *  Get the value to be aggregated.
+	 *  Get the value to be aggregated. The method can throw an exception
+	 *  to notify the invoker that the value is not available; e.g., because
+	 *  the node is down, or it is not partecipating in the protocol.
 	 */
 	public double getValue();
 
