@@ -26,7 +26,7 @@ import peersim.cdsim.CDProtocol;
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.1 $
+ *  @version $Revision: 1.2 $
  */
 public abstract class AbstractFunction
 implements CDProtocol, Aggregation
@@ -56,6 +56,8 @@ protected double value;
 // Constructor
 ////////////////////////////////////////////////////////////////////////////
 
+
+protected AbstractFunction() {}
 
 public AbstractFunction(String prefix, Object obj) {
 
