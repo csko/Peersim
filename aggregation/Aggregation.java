@@ -15,7 +15,7 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  *
  */
- 
+
 package aggregation;
 
 /**
@@ -28,19 +28,19 @@ package aggregation;
  *  reduce memory footprint.
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.1 $
+ *  @version $Revision: 1.2 $
  */
-public interface Aggregation 
+public interface Aggregation
 {
 
-   /**
-    *  Get the value to be aggregated.
-    */
-   public double getValue();
-   
-  /**
-   *  Set the value to be aggregated.
-   */
-   public void setValue(double value);
+	/**
+	 *  Get the value to be aggregated.
+	 */
+	public double getValue();
+
+	/**
+	 *  Set the value to be aggregated.
+	 */
+	public void setValue(double value);
 
 }
