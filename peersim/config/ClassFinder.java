@@ -27,12 +27,12 @@ import java.util.zip.*;
  * of a class, given just the non-qualified name, and to obtain
  * the non-qualified name, given the package-qualified class name.
  * 
- * Inspired from some code written by David Postill (dave.postill@pobox.com)
+ * Inspired from some code written by David Postill (david@postill.org.uk)
  * (found in http://groups.google.com).
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class ClassFinder 
 {
