@@ -27,7 +27,7 @@ import peersim.dynamics.Dynamics;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class UniformDistribution implements Dynamics {
 
@@ -82,11 +82,11 @@ public void modify()
 	double d = max-min;
 	double sum = 0.0;
 	double tmp;
-	for(int i=0; i<OverlayNetwork.size(); ++i)
+	for(int i=0; i<Network.size(); ++i)
 	{
 		tmp = CommonRandom.r.nextDouble()*d+min;
 		sum += tmp;
-		((Aggregation)OverlayNetwork.get(i).getProtocol(protocolID)
+		((Aggregation)Network.get(i).getProtocol(protocolID)
 			).setValue(tmp);
 	}
 }

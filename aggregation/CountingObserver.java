@@ -31,7 +31,7 @@ import peersim.util.*;
  * size and actual size.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class CountingObserver  implements Observer
 {
@@ -121,12 +121,12 @@ public class CountingObserver  implements Observer
   	}
   	
   	/* Initialization */
-		final int len = OverlayNetwork.size();
+		final int len = Network.size();
 		IncrementalStats stats = new IncrementalStats();
 
 		/* Compute max, min, average */
 		for (int i=0; i < len; i++) {
-			Node node = OverlayNetwork.get(i);
+			Node node = Network.get(i);
 			Aggregation protocol = (Aggregation) node.getProtocol(pid);
 
       boolean toBeCounted = true;
