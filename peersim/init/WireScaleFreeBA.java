@@ -21,13 +21,12 @@ package peersim.init;
 import peersim.config.*;
 import peersim.core.*;
 import peersim.util.*;
-import peersim.init.*;
 
 /**
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class WireScaleFreeBA
 implements Initializer
