@@ -32,7 +32,7 @@ import java.util.zip.*;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class ClassFinder 
 {
@@ -123,8 +123,8 @@ throws IOException
     File pathFile = new File( pathElement );
     
     if( pathFile.isDirectory() ) {
-    	if (!pathElement.endsWith("/")) {
-    		pathElement = pathElement + "/";
+    	if (!pathElement.endsWith(separator)) {
+    		pathElement = pathElement + separator;
     		pathFile = new File( pathElement);
     	}
       findClassInPathDir( map, pathElement, pathFile );
@@ -199,7 +199,7 @@ private static void findClassInPathDir( Map map, String pathElement, File pathFi
  */
 private static String classname(String classFile)
 { 
-  return classFile.replace( '/', '.' ).substring( 0, classFile.length() - ".class".length() ); 
+  return classFile.replaceAll( "/", "." ).substring( 0, classFile.length() - ".class".length() ); 
 }
 
 /** 
