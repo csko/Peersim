@@ -22,7 +22,7 @@ package peersim.config;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class IllegalParameterException
 extends RuntimeException
@@ -34,7 +34,7 @@ extends RuntimeException
 
 	public String getMessage() {
 
-		return super.getMessage()+" at "+
+		return super.getMessage()+"\nAt "+
 			getStackTrace()[1].getClassName()+"."+
 			getStackTrace()[1].getMethodName()+":"+
 			getStackTrace()[1].getLineNumber();
