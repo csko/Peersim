@@ -16,7 +16,7 @@
  *
  */
 
-package distributions;
+package peersim.vector;
 
 import peersim.core.*;
 
@@ -25,7 +25,7 @@ import peersim.core.*;
  * available through the SingleValue interface.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.1 $
  */
 public class SingleValueHolder 
 implements SingleValue, Protocol

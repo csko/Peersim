@@ -21,14 +21,14 @@ package example.aggregation;
 import peersim.util.CommonRandom;
 import peersim.core.*;
 import peersim.config.FastConfig;
-import distributions.SingleValueHolder;
+import peersim.vector.SingleValueHolder;
 import peersim.cdsim.CDProtocol;
 
 /**
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.3 $
+ *  @version $Revision: 1.4 $
  */
 public class AverageFunction extends SingleValueHolder implements CDProtocol {
 

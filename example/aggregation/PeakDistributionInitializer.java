@@ -21,12 +21,13 @@ package example.aggregation;
 import peersim.config.*;
 import peersim.core.*;
 import peersim.dynamics.Dynamics;
+import peersim.vector.SingleValue;
 
 /**
  * Initialize an aggregation protocol using a peak distribution.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class PeakDistributionInitializer implements Dynamics
 {

@@ -22,6 +22,7 @@ import peersim.core.*;
 import peersim.reports.*;
 import peersim.util.Log;
 import peersim.config.*;
+import peersim.vector.SingleValue;
 
 /**
  * Print statistics for an average aggregation computation.
@@ -30,7 +31,7 @@ import peersim.config.*;
  * and actual size.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class AverageObserver implements Observer
 {
