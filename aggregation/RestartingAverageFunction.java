@@ -25,7 +25,7 @@ import peersim.core.*;
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.1 $
+ *  @version $Revision: 1.2 $
  */
 public class RestartingAverageFunction extends AbstractFunction
 {
@@ -70,7 +70,6 @@ public class RestartingAverageFunction extends AbstractFunction
 	 */
 	public void nextCycle(Node node, int pid)
 	{
-		int time = peersim.core.CommonState.getT();
 		// Nodes "just arrived" do not partecipate in the current epoch 
 		if (justArrived)
 			return;

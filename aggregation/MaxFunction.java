@@ -25,7 +25,7 @@ import peersim.core.*;
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.1 $
+ *  @version $Revision: 1.2 $
  */
 public class MaxFunction extends AbstractFunction
 {
@@ -48,7 +48,6 @@ public Object clone() throws CloneNotSupportedException
  */
 public void nextCycle( Node node, int protocolID)
 {
-	int time = peersim.core.CommonState.getT();
 	int linkableID = Protocols.getLink(protocolID);
 	Linkable linkable = (Linkable) node.getProtocol(linkableID);
 	if (linkable.degree() > 0)
