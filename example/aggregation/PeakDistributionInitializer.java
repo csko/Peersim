@@ -26,7 +26,7 @@ import peersim.dynamics.Dynamics;
  * Initialize an aggregation protocol using a peak distribution.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class PeakDistributionInitializer implements Dynamics
 {
@@ -79,7 +79,7 @@ public class PeakDistributionInitializer implements Dynamics
 	public PeakDistributionInitializer(String prefix)
 	{
 		value = Configuration.getDouble(prefix + "." + PAR_VALUE);
-		pid = Configuration.getInt(prefix + "." + PAR_PROT);
+		pid = Configuration.getPid(prefix + "." + PAR_PROT);
 		epochLength = Configuration.getInt(prefix + "." + PAR_EPOCH_LEN, 30);
 	}
 

@@ -26,7 +26,7 @@ import peersim.util.*;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class WireScaleFreeDM
 implements Dynamics
@@ -69,7 +69,7 @@ int edges;
 public WireScaleFreeDM(String prefix)
 {
 	/* Read parameters */
-	pid = Configuration.getInt(prefix + "." + PAR_PROT);
+	pid = Configuration.getPid(prefix + "." + PAR_PROT);
 	nodes = Network.size();
 	edges = Configuration.getInt(prefix + "." + PAR_EDGES);
   }
