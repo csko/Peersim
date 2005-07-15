@@ -20,16 +20,15 @@ package peersim.dynamics;
 
 import peersim.config.*;
 import peersim.core.*;
-import peersim.util.*;
 
 /**
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class WireScaleFreeDM
-implements Dynamics
+implements Control
 {
 
 ////////////////////////////////////////////////////////////////////////////
@@ -99,7 +98,7 @@ private boolean addNeighbor(Node n, int pid, Node n2) {
 
 
 // Comment inherited from interface
-public void modify() 
+public boolean execute() 
 {
 	Node[] links = new Node[4*edges*nodes];
 
@@ -126,7 +125,7 @@ public void modify()
 	for (int i=clique; i < nodes; i++) {
 		Node ni = Network.get(i);
 		for (int j=0; j < edges; j++) {
-			int edge = CommonRandom.r.nextInt(len);
+			int edge = CommonState.r.nextInt(len);
 			Node nk = links[edge*2];
 			Node nj = links[edge*2+1];
 			addNeighbor(ni, pid, nk);
@@ -148,6 +147,8 @@ public void modify()
 			link.pack();
 		}
 	}
+
+	return false;
 }
 		
 }

@@ -33,7 +33,7 @@ import peersim.util.*;
  * inserted in the protocol array of all nodes. 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class UnreliableTransport implements Transport
 {
@@ -96,7 +96,7 @@ public Object clone()
 // Comment inherited from interface
 public void send(Node src, Node dest, Object msg, int pid)
 {
-	if (CommonRandom.r.nextFloat() >= loss) {
+	if (CommonState.r.nextFloat() >= loss) {
 		// Message is not lost
 		Transport t = (Transport) src.getProtocol(pid);
 		t.send(src, dest, msg, pid);

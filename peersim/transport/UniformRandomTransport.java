@@ -28,7 +28,7 @@ import peersim.util.*;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class UniformRandomTransport implements Transport
 {
@@ -85,14 +85,14 @@ public Object clone()
 // Comment inherited from interface
 public void send(Node src, Node dest, Object msg, int pid)
 {
-	int delay = min + CommonRandom.r.nextInt(range);
+	int delay = min + CommonState.r.nextInt(range);
 	EDSimulator.add(delay, msg, dest, pid);
 }
 
 //Comment inherited from interface
 public int getLatency(Node src, Node dest)
 {
-	return min + CommonRandom.r.nextInt(range);
+	return min + CommonState.r.nextInt(range);
 }
 
 

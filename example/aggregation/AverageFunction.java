@@ -18,7 +18,6 @@
 
 package example.aggregation;
 
-import peersim.util.CommonRandom;
 import peersim.core.*;
 import peersim.config.FastConfig;
 import peersim.vector.SingleValueHolder;
@@ -28,7 +27,7 @@ import peersim.cdsim.CDProtocol;
  * 
  *
  *  @author Alberto Montresor
- *  @version $Revision: 1.4 $
+ *  @version $Revision: 1.5 $
  */
 public class AverageFunction extends SingleValueHolder implements CDProtocol {
 
@@ -54,7 +53,7 @@ public void nextCycle( Node node, int protocolID )
 	if (linkable.degree() > 0)
 	{
 		Node peer = linkable.getNeighbor(
-				CommonRandom.r.nextInt(linkable.degree()));
+				CommonState.r.nextInt(linkable.degree()));
 		
 		// XXX quick and dirty handling of failure
 		if(peer.getFailState()!=Fallible.OK) return;
