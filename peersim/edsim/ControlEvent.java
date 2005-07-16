@@ -26,7 +26,7 @@ import peersim.core.Scheduler;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class ControlEvent
 {
@@ -63,6 +63,7 @@ ControlEvent(Control control, Scheduler scheduler, int order)
 {
 	this.control = control;
 	this.order = order;
+	this.scheduler = scheduler;
 	EDSimulator.addControlEvent(scheduler.getNext(), order, this);
 }
 
