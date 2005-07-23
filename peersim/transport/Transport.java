@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 The BISON Project
+ * Copyright (c) 2003-2005 The BISON Project
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License version 2 as
@@ -28,7 +28,7 @@ import peersim.core.*;
  * messages after some appropriate delay.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public interface Transport extends Protocol
 {

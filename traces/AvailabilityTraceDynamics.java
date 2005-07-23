@@ -37,7 +37,7 @@ import peersim.cdsim.CDState;
  * <br>
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class AvailabilityTraceDynamics implements Control
 {
@@ -47,20 +47,21 @@ public class AvailabilityTraceDynamics implements Control
 //---------------------------------------------------------------------
 
 /**
- *  Name of the parameter used to configure the file containing the
- *  session data. Currently based on the Saroiu format.
+ * The file containing the session data. Currently based on the Saroiu
+ * format.
+ * @config
  */
 private static final String PAR_FILE = "file";
 
-
 /**
- *  Name of the parameter used to configure the length of a cycle.
+ * The length of a cycle.
+ * @config
  */
 private static final String PAR_CYCLE = "cycle";
 
 /**
- *  Name of the parameter used to configure the number of time units
- *  in which a second is subdivided.
+ * The number of time units in which a second is subdivided.
+ * @config
  */
 private static final String PAR_UNITS = "units";
 

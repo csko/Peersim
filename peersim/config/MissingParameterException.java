@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003 The BISON Project
+ * Copyright (c) 2003-2005 The BISON Project
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License version 2 as
@@ -22,7 +22,7 @@ package peersim.config;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.6 $
+ * @version $Revision: 1.7 $
  */
 public class MissingParameterException
 extends RuntimeException
