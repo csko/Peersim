@@ -28,7 +28,7 @@ import peersim.core.*;
  * messages after some appropriate delay.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public interface Transport extends Protocol
 {
@@ -52,7 +52,7 @@ public void send(Node src, Node dest, Object msg, int pid);
  * @param src sender node
  * @param dest destination node
  */
-public int getLatency(Node src, Node dest);
+public long getLatency(Node src, Node dest);
 
 
 }

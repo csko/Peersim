@@ -32,7 +32,7 @@ import peersim.core.*;
  * inserted in the protocol array of all nodes. 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class UnreliableTransport implements Transport
 {
@@ -103,7 +103,7 @@ public void send(Node src, Node dest, Object msg, int pid)
 }
 
 //Comment inherited from interface
-public int getLatency(Node src, Node dest)
+public long getLatency(Node src, Node dest)
 {
 	Transport t = (Transport) src.getProtocol(pid);
 	return t.getLatency(src, dest);
