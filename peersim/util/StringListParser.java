@@ -43,7 +43,7 @@ import java.util.*;
  * range 2, 32-64-128 (range between 32 and 128, multiplicative range 2).
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class StringListParser
 {
@@ -122,10 +122,7 @@ private static void parseRangeItem(List list, String start, String stop)
 	}
 }
 
-/**
- * Test main.
- * @param args parse the first command-line argument.
- */
+/*
 public static void main(String[] args)
 {
 	String[] ret = parseList(args[0]);
@@ -133,4 +130,5 @@ public static void main(String[] args)
 		System.out.print(ret[i] + " ");
 	System.out.println("");
 }
+*/
 }
