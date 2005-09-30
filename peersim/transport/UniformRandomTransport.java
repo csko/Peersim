@@ -27,7 +27,7 @@ import peersim.edsim.*;
  * 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.8 $
+ * @version $Revision: 1.9 $
  */
 public class UniformRandomTransport implements Transport
 {
@@ -67,7 +67,7 @@ private final long range;
 /**
  * 
  */
-public UniformRandomTransport(String prefix)
+public UniformRandomTransport(String prefix, Object obj)
 {
 	min = Configuration.getLong(prefix + "." + PAR_MINDELAY);
 	long max = Configuration.getLong(prefix + "." + PAR_MAXDELAY,min);

@@ -32,7 +32,7 @@ import peersim.core.*;
  * inserted in the protocol array of all nodes. 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.7 $
+ * @version $Revision: 1.8 $
  */
 public class UnreliableTransport implements Transport
 {
@@ -72,7 +72,7 @@ private final float loss;
 /**
  * Reads configuration parameter.
  */
-public UnreliableTransport(String prefix)
+public UnreliableTransport(String prefix, Object obj)
 {
 	transport = Configuration.getPid(prefix+"."+PAR_TRANSPORT);
 	loss = (float) Configuration.getDouble(prefix+"."+PAR_DROP);

@@ -25,7 +25,7 @@ import peersim.core.*;
  * available through the {@link SingleValue} interface.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class SingleValueHolder 
 implements SingleValue, Protocol
@@ -45,9 +45,8 @@ protected double value;
 
 /**
  * Does nothing.
- * @param prefix the configuration prefix for this class
  */
-public SingleValueHolder(String prefix)
+public SingleValueHolder(String prefix, Object obj)
 {
 }
 
