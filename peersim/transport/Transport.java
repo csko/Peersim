@@ -25,10 +25,11 @@ import peersim.core.*;
  * This interface represents a generic transport protocol, used to
  * send messages through the underlying network. Generally, transport
  * protocols use {@link peersim.edsim.EDSimulator} to schedule the delivery of
- * messages after some appropriate delay.
+ * messages with some appropriate delay. They can also model message omission
+ * failure as well.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.6 $
+ * @version $Revision: 1.7 $
  */
 public interface Transport extends Protocol
 {
