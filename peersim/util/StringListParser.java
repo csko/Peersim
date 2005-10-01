@@ -43,7 +43,7 @@ import java.util.*;
  * range 2, 32-64-128 (range between 32 and 128, multiplicative range 2).
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class StringListParser
 {
@@ -60,15 +60,15 @@ private StringListParser() { }
  */
 public static String[] parseList(String s)
 {
-	ArrayList list = new ArrayList();
+	ArrayList<String> list = new ArrayList<String>();
 	String[] tokens = s.split(",");
 	for (int i = 0; i < tokens.length; i++) {
 		parseItem(list, tokens[i]);
 	}
-	return (String[]) list.toArray(new String[list.size()]);
+	return list.toArray(new String[list.size()]);
 }
 
-private static void parseItem(List list, String item)
+private static void parseItem(List<String> list, String item)
 {
 	String[] array = item.split(":");
 	if (array.length == 1) {
@@ -81,12 +81,12 @@ private static void parseItem(List list, String item)
 	}
 }
 
-private static void parseSingleItem(List list, String item)
+private static void parseSingleItem(List<String> list, String item)
 {
 	list.add(item);
 }
 
-private static void parseRangeItem(List list, String start, String stop)
+private static void parseRangeItem(List<String> list, String start, String stop)
 {
 	double vstart;
 	double vstop;

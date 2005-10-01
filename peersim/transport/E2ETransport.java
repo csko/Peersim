@@ -29,7 +29,7 @@ import peersim.edsim.*;
  * and that class is used to obtain the latency for messages sending.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.7 $
+ * @version $Revision: 1.8 $
  */
 public class E2ETransport implements Transport, RouterInfo
 {
@@ -69,7 +69,7 @@ private int router = -1;
  * Reads configuration parameters. Actual initialization (i.e.,
  * router assignment) is delegated to initializers.
  */
-public E2ETransport(String prefix, Object obj)
+public E2ETransport(String prefix)
 {
 	tid = CommonState.getPid();
 	local = Configuration.getLong(prefix + "." + PAR_LOCAL, 0);

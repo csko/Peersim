@@ -26,7 +26,7 @@ import peersim.vector.SingleValue;
  * Initialize an aggregation protocol using a peak distribution.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.8 $
+ * @version $Revision: 1.9 $
  */
 public class PeakDistributionInitializer implements Control
 {
@@ -47,14 +47,6 @@ private static final String PAR_VALUE = "value";
  */
 private static final String PAR_PROT = "protocol";
 
-/**
- * String name of the parameter that defines the length of an epoch in
- * number of cycles. Parameter read will have the full name
- * <tt>prefix+"."+PAR_EPOCH_LEN</tt>
- * @config
- */
-private static final String PAR_EPOCH_LEN = "epoch.length";
-
 // --------------------------------------------------------------------------
 // Fields
 // --------------------------------------------------------------------------
@@ -64,9 +56,6 @@ private final double value;
 
 /** Protocol identifier */
 private final int pid;
-
-/** Number of cycles composing an epoch */
-private final int epochLength;
 
 // --------------------------------------------------------------------------
 // Constructor
@@ -79,7 +68,6 @@ public PeakDistributionInitializer(String prefix)
 {
 	value = Configuration.getDouble(prefix + "." + PAR_VALUE);
 	pid = Configuration.getPid(prefix + "." + PAR_PROT);
-	epochLength = Configuration.getInt(prefix + "." + PAR_EPOCH_LEN, 30);
 }
 
 // --------------------------------------------------------------------------
