@@ -25,14 +25,14 @@ import peersim.core.*;
  * model. A single method is provided, to deliver events to the protocol.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public interface EDProtocol 
 extends Protocol 
 {
 
 	/**
-	* This method is invoked by the scheduler to deliver eve\nts to the
+	* This method is invoked by the scheduler to deliver events to the
 	* protcol. Apart from the event object, information about the node
 	* and the protocol identifier are also provided. Additional information
 	* can be accessed through the {@link CommonState} class.

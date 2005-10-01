@@ -23,10 +23,10 @@ import peersim.core.Scheduler;
 
 
 /**
- * 
+ * Wrapper for {@link Control}s to be executed in an event driven simulation.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 class ControlEvent
 {
