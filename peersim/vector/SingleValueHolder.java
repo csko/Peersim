@@ -25,7 +25,7 @@ import peersim.core.*;
  * available through the {@link SingleValue} interface.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class SingleValueHolder 
 implements SingleValue, Protocol
@@ -55,9 +55,12 @@ public SingleValueHolder(String prefix)
 /**
  * Clones the value holder.
  */
-public Object clone() throws CloneNotSupportedException
+public Object clone()
 {
-	return super.clone();
+	SingleValueHolder svh=null;
+	try { svh=(SingleValueHolder)super.clone(); }
+	catch( CloneNotSupportedException e ) {} // never happens
+	return svh;
 }
 
 //--------------------------------------------------------------------------

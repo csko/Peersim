@@ -32,7 +32,7 @@ import peersim.edsim.*;
  * latency for messages sending based on the router assignment.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.9 $
+ * @version $Revision: 1.10 $
  */
 public class E2ETransport implements Transport, RouterInfo
 {
@@ -85,9 +85,12 @@ public E2ETransport(String prefix)
 /**
  * Clones the object.
  */
-public Object clone() throws CloneNotSupportedException
+public Object clone()
 {
-	return super.clone();
+	E2ETransport e2e=null;
+	try { e2e=(E2ETransport)super.clone(); }
+	catch( CloneNotSupportedException e ) {} // never happens
+	return e2e;
 }
 
 //---------------------------------------------------------------------
