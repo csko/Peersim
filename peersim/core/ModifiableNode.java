@@ -24,15 +24,13 @@ package peersim.core;
  * protocol instances at nodes.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class ModifiableNode extends GeneralNode
 {
 
 /**
  * Invokes the super constructor.
- * 
- * @param prefix
  */
 public ModifiableNode(String prefix)
 {
