@@ -24,7 +24,7 @@ import peersim.config.*;
  * This utility class must be used by observers to report their data.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class Log
 {
@@ -35,7 +35,8 @@ public class Log
 
 /**
  * If specified, this parameter specifies the logging class to be used.
- * If absent, {@link peersim.core.Log} is used. 
+ * The logging class must implement interface {@link peersim.core.Logger}.
+ * If absent, {@link peersim.core.DefaultLogger} is used. 
  * @config
  */
 public static final String PAR_LOG = "log";
