@@ -25,7 +25,7 @@ package peersim.transport;
  * of routers.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class E2ENetwork
 {
@@ -93,6 +93,9 @@ public static void reset(int size, boolean symm)
  */
 public static int getLatency(int sender, int receiver) 
 {
+	if (sender == receiver)
+		return 0;
+	// XXX There should be the possibility to fix the delay.
 	if (symm) {
 		// Symmetric network
 		if (sender < receiver) {

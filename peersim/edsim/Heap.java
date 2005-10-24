@@ -18,7 +18,6 @@
 
 package peersim.edsim;
 
-import java.util.*;
 import peersim.core.*;
 
 /**
@@ -26,7 +25,7 @@ import peersim.core.*;
  *  scheduled time and to obtain the next event to be executed.
  *  
  *  @author Alberto Montresor
- *  @version $Revision: 1.6 $
+ *  @version $Revision: 1.7 $
  */
 class Heap {
 
@@ -275,7 +274,6 @@ private void put(int index, long time, Object event, Node node, byte pid) {
 private void doubleCapacity() {
 	int oldsize = events.length;
 	int newsize = oldsize*2;
-	//System.out.println(newsize);
 	Object[] te = new Object[newsize];
 	System.arraycopy(events, 0, te, 0, oldsize);
 	events = te;
@@ -294,6 +292,7 @@ private void doubleCapacity() {
 // Testing
 //--------------------------------------------------------------------------
 
+/*
 public static void main(String[] args) {
 	Random random = new Random();
 	Heap heap = new Heap();
@@ -325,5 +324,6 @@ public static void main(String[] args) {
 			System.out.print("+");
 	}
 }
+*/
 
 } // END Heap

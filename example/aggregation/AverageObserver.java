@@ -28,7 +28,7 @@ import peersim.vector.*;
  * average/maximum/minimum of averages, and actual size.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.9 $
+ * @version $Revision: 1.10 $
  */
 public class AverageObserver implements Control
 {
@@ -118,7 +118,7 @@ public boolean execute()
 	}
 
 	/* Printing statistics */
-	Log.println(name, time + " " + // current time (cycle)
+	Log.println(name, " " + time + " " + // current time (cycle)
 			sd + " " + // standard deviation
 			sd / initsd + " " + // standard deviation reduction
 			average + " " + // Average of averages
