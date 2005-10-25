@@ -37,7 +37,7 @@ import peersim.cdsim.CDState;
  * <br>
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class AvailabilityTraceDynamics implements Control
 {
@@ -223,7 +223,7 @@ public boolean execute()
 		}
 	}
 	size += up - down;
-	Log.println(prefix,  
+	System.out.println(prefix+": "+  
 			" TIME " + CDState.getCycle() +
 			" EPOCH " + CDState.getCycle()/30 +
 			" SIZE " + size +
