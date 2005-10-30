@@ -28,7 +28,7 @@ import peersim.vector.SingleValue;
  * {@link peersim.vector.SingleValue} can be initialized by this component.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.10 $
+ * @version $Revision: 1.11 $
  */
 public class PeakDistributionInitializer implements Control {
 
@@ -41,14 +41,14 @@ public class PeakDistributionInitializer implements Control {
      * 
      * @config
      */
-    private final String PAR_VALUE = "value";
+    private static final String PAR_VALUE = "value";
 
     /**
      * The protocol to operate on.
      * 
      * @config
      */
-    private final String PAR_PROT = "protocol";
+    private static final String PAR_PROT = "protocol";
 
     // --------------------------------------------------------------------------
     // Fields
