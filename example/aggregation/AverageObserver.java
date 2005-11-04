@@ -28,7 +28,7 @@ import peersim.util.IncrementalStats;
  * are defined by {@link IncrementalStats#toString}
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.14 $
+ * @version $Revision: 1.15 $
  */
 public class AverageObserver implements Control {
 
@@ -94,7 +94,7 @@ public class AverageObserver implements Control {
     * Statistics printed
     * are defined by {@link IncrementalStats#toString}
     * @return if the standard deviation is less than the given
-    * {@value PAR_ACCURACY}.
+    * {@value #PAR_ACCURACY}.
     */
     public boolean execute() {
         
