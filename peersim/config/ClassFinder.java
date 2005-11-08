@@ -32,7 +32,7 @@ import java.util.zip.*;
  *
  *
  * @author Alberto Montresor
- * @version $Revision: 1.6 $
+ * @version $Revision: 1.7 $
  */
 class ClassFinder 
 {
@@ -202,7 +202,7 @@ private static void findClassInPathDir( Map<String,String> map, String
 private static String classname(String classFile)
 { 
   String filesep = System.getProperty( "file.separator");
-  return classFile.replaceAll( filesep, "." ).substring( 0, classFile.length() - ".class".length() ); 
+  return classFile.replace( filesep, "." ).substring( 0, classFile.length() - ".class".length() ); 
 }
 
 /** 
