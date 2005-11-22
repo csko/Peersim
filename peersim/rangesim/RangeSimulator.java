@@ -80,7 +80,7 @@ java peersim.rangesim.RangeSimulator config.file jvm.options=-Xmx256m
  * specify additional classpath specification.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.7 $
+ * @version $Revision: 1.8 $
  */
 public class RangeSimulator
 {
@@ -146,7 +146,11 @@ public static void main(String[] args)
 	Configuration.setConfig(properties);
 	
 	// Read jvm options and separate them in different strings
-	jvmoptions = Configuration.getString(PAR_JVM, "").split(" ");
+	String opt = Configuration.getString(PAR_JVM, null);
+	if (opt == null)
+		jvmoptions = new String[0];
+	else
+		jvmoptions = opt.split(" ");
 
 	// Parse range parameters
 	parseRanges();
