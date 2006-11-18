@@ -29,7 +29,7 @@ import peersim.edsim.*;
  * distribution.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.11 $
+ * @version $Revision: 1.12 $
  */
 public class UniformRandomTransport implements Transport
 {
@@ -39,13 +39,13 @@ public class UniformRandomTransport implements Transport
 //---------------------------------------------------------------------
 
 /** 
- * String name of the parameter used to configure the minimum latency 
+ * String name of the parameter used to configure the minimum latency.
  * @config
  */	
 private static final String PAR_MINDELAY = "mindelay";	
 	
 /** 
- * String name of the parameter used to configure the maximum latency
+ * String name of the parameter used to configure the maximum latency.
  * Defaults to {@value #PAR_MINDELAY}, which results in a constant delay.
  * @config 
  */	
@@ -58,7 +58,9 @@ private static final String PAR_MAXDELAY = "maxdelay";
 /** Minimum delay for message sending */
 private final long min;
 	
-/** Delay range */
+/** Difference between the max and min delay plus one. That is, max delay is
+* min+range-1.
+*/
 private final long range;
 
 	
