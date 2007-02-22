@@ -37,7 +37,7 @@ import peersim.core.*;
  * link</a>), ordered first by row than by column.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class TriangularMatrixParser implements Control
 {
@@ -111,7 +111,7 @@ public boolean execute()
 		System.err.println("TriangularMatrixParser: reading " + size + " rows");
 	
 		// If the file format is not correct, data will be read 
-		// uncorrectly. Probably a good way to spot this is the 
+		// incorrectly. Probably a good way to spot this is the 
 		// presence of negative delays, or an end of file.
 	
 		// Reading data
