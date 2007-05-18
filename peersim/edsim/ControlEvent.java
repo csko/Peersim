@@ -26,7 +26,7 @@ import peersim.core.Scheduler;
  * Wrapper for {@link Control}s to be executed in an event driven simulation.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 class ControlEvent
 {
@@ -64,7 +64,8 @@ public ControlEvent(Control control, Scheduler scheduler, int order)
 	this.control = control;
 	this.order = order;
 	this.scheduler = scheduler;
-	EDSimulator.addControlEvent(scheduler.getNext(), order, this);
+	long next = scheduler.getNext();
+	if( next>=0 ) EDSimulator.addControlEvent(next, order, this);
 }
 
 //---------------------------------------------------------------------
@@ -79,7 +80,7 @@ public boolean execute() {
 
 	boolean ret = control.execute();
 	long next = scheduler.getNext();
-	if( next >=0 ) EDSimulator.addControlEvent(next, order, this);
+	if( next>=0 ) EDSimulator.addControlEvent(next, order, this);
 	return ret;
 }
 

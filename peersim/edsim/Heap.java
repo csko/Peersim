@@ -25,7 +25,7 @@ import peersim.core.*;
  *  scheduled time and to obtain the next event to be executed.
  *  
  *  @author Alberto Montresor
- *  @version $Revision: 1.7 $
+ *  @version $Revision: 1.8 $
  */
 class Heap {
 
@@ -90,7 +90,7 @@ public Heap(int size) {
 //--------------------------------------------------------------------------
 
 /**
- * Returns the current number of event in the system.
+ * Returns the current number of events in the system.
  */
 public int size()
 {
