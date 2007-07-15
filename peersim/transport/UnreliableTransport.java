@@ -33,7 +33,7 @@ import peersim.core.*;
  * that depends on the hosting node). 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.10 $
+ * @version $Revision: 1.11 $
  */
 public class UnreliableTransport implements Transport
 {
@@ -83,7 +83,7 @@ public UnreliableTransport(String prefix)
 //---------------------------------------------------------------------
 
 /**
-* Retuns <code>this</code>. This way only one instance exists in the system
+* Returns <code>this</code>. This way only one instance exists in the system
 * that is linked from all the nodes. This is because this protocol has no
 * state that depends on the hosting node.
  */
