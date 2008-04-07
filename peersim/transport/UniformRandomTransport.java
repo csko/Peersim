@@ -29,7 +29,7 @@ import peersim.edsim.*;
  * distribution.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.12 $
+ * @version $Revision: 1.13 $
  */
 public class UniformRandomTransport implements Transport
 {
@@ -84,7 +84,7 @@ public UniformRandomTransport(String prefix)
 //---------------------------------------------------------------------
 
 /**
-* Retuns <code>this</code>. This way only one instance exists in the system
+* Returns <code>this</code>. This way only one instance exists in the system
 * that is linked from all the nodes. This is because this protocol has no
 * node specific state.
 */

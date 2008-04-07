@@ -25,7 +25,7 @@ package peersim.transport;
  * of routers.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class E2ENetwork
 {
@@ -133,7 +133,7 @@ public static void setLatency(int sender, int receiver, int latency)
 //---------------------------------------------------------------------
 
 /**
- * Returns the current size of the underlying network (ie, the number of
+ * Returns the current size of the underlying network (i.e., the number of
  * routers).
  */
 public static int getSize()

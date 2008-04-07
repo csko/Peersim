@@ -23,12 +23,12 @@ import java.util.*;
 
 /**
  * This comparator class compares two node objects based on the value 
- * maintained by one of its protocols. The protocol must implemente the
+ * maintained by one of its protocols. The protocol must implement the
  * {@link SingleValue} interface; its identifier has to be specified when a
  * new comparator is built.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class SingleValueComparator implements Comparator 
 {
