@@ -37,7 +37,7 @@ import peersim.cdsim.CDState;
  * <br>
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.6 $
+ * @version $Revision: 1.7 $
  */
 public class AvailabilityTraceDynamics implements Control
 {
@@ -139,6 +139,9 @@ public AvailabilityTraceDynamics(String prefix)
 				zn++;
 			}
 		}
+		
+		in.close();
+
 	} catch (IOException e ) {
 		e.printStackTrace(System.err);
 		System.exit(0);	

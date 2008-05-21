@@ -27,7 +27,7 @@ import peersim.core.Control;
  * Initializes static singleton {@link E2ENetwork} by reading a king data set.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.7 $
+ * @version $Revision: 1.8 $
  */
 public class KingParser implements Control
 {
@@ -129,8 +129,12 @@ public boolean execute()
 
 			line = in.readLine();
 		} while (line != null);
+		
+		in.close();
+	
 	} catch (IOException e) {
 	}
+
 
 	return false;
 }

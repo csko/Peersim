@@ -33,9 +33,9 @@ import peersim.core.*;
  * that depends on the hosting node). 
  *
  * @author Alberto Montresor
- * @version $Revision: 1.12 $
+ * @version $Revision: 1.13 $
  */
-public class UnreliableTransport implements Transport
+public final class UnreliableTransport implements Transport
 {
 
 //---------------------------------------------------------------------
