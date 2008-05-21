@@ -37,7 +37,7 @@ import peersim.core.*;
  * link</a>), ordered first by row than by column.
  * 
  * @author Alberto Montresor
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class TriangularMatrixParser implements Control
 {
@@ -70,9 +70,6 @@ private static final String PAR_RATIO = "ratio";
 /** Name of the file containing the measurements. */
 private String filename;
 
-/** Prefix for reading parameters */
-private String prefix;
-
 /** Ratio read from PAR_RATIO */
 private double ratio;
 
@@ -85,7 +82,6 @@ private double ratio;
  */
 public TriangularMatrixParser(String prefix)
 {
-	this.prefix = prefix;
 	filename = Configuration.getString(prefix + "." + PAR_FILE);
 	ratio = Configuration.getDouble(prefix + "." + PAR_RATIO);
 }
