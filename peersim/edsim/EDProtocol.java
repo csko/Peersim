@@ -25,9 +25,9 @@ import peersim.core.*;
  * model. A single method is provided, to deliver events to the protocol.
  *
  * @author Alberto Montresor
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
-public interface EDProtocol 
+public interface EDProtocol<T>
 extends Protocol 
 {
 
@@ -41,7 +41,7 @@ extends Protocol
 	* @param pid the identifier of this protocol
 	* @param event the delivered event
 	*/
-	public void processEvent( Node node, int pid, Object event );
+	public void processEvent( Node node, int pid, T event );
 
 }
 
